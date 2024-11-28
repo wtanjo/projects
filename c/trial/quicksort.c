@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "mine.h"
 
-void quicksort(int arr[], int start, int end);
+void quicksort(int *arr, int start, int end);
 
 int main() {
     int *arr = getintArray();
@@ -14,7 +14,7 @@ int main() {
     return 0;
 }
 
-void quicksort(int arr[], int l, int r) {//l(left)为排序起始位置，r(right)为排序终止位置，全部排序设置l=0,r=n-1
+void quicksort(int *arr, int l, int r) {//l(left)为排序起始位置，r(right)为排序终止位置，全部排序设置l=0,r=n-1
     int i = l, j = r;
     int base = arr[l];//设置基准值
     if (l >= r) {
