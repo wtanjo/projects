@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "cmath": "c",
+        "math.h": "c",
+        "string.h": "c",
+        "triangle.h": "c",
+        "mine.h": "c",
+        "array": "c"
+    },
+    "code-runner.runInTerminal": true,
+    "files.encoding": "gb18030"
+}
