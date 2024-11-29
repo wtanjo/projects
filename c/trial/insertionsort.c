@@ -3,7 +3,7 @@
 #include "mine.h"
 
 int main() {
-    int *arr = getArray();
+    int *arr = getSuitableIntArray();
     int n = _msize((void*)arr) / sizeof(arr[0]);
     int temp, j;
     for(int i = 1; i < n; i++){

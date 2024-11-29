@@ -4,7 +4,7 @@
 void quicksort(int *arr, int start, int end);
 
 int main() {
-    int *arr = getintArray();
+    int *arr = getSuitableIntArray();
     int n = _msize((void*)arr)/sizeof(arr[0]);
     quicksort(arr, 0, n-1);
     for (int i = 0; i < n; i++) {

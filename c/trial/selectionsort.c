@@ -3,7 +3,7 @@
 #include "mine.h"
 
 int main() {
-    int *arr = getArray();
+    int *arr = getSuitableIntArray();
     int n = _msize((void *)arr)/sizeof(arr[0]);
     for (int i = 0; i < n-1; i++) {
         int min = i;

@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define N 1000
 
-int *getintArray() {
+int *getSuitableIntArray() {
     int *arr0 = (int*)malloc(N*sizeof(int));
     int i = 0;
     for (i = 0; i < N; i++) {
@@ -15,4 +16,15 @@ int *getintArray() {
     free((void*)arr0); 
     return arr;
 }
-//记得最后free((void*)arr)
+
+char *getSuitableString() {
+    char *str0 = (char*)malloc(N*sizeof(char));
+    fgets(str0, N, stdin);
+    int len = strlen(str0);
+    char *str = (char*)realloc((void*)str0, (len+1)*sizeof(char));
+    str[len] = '\0';
+    str0 = NULL;
+    free((void*)str0); 
+    return str;
+}
+//记得最后free((void*)arr), free((void*)str)

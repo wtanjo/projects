@@ -4,7 +4,7 @@
 int binary_search(int *arr, int l, int r, int k);
 
 int main() {
-    int *arr = getintArray();//输入一个非降序数组(非降序数组是指一个数组中的元素按从小到大的顺序排列，或者相等的元素可以相邻排列)
+    int *arr = getSuitableIntArray();//输入一个非降序数组(非降序数组是指一个数组中的元素按从小到大的顺序排列，或者相等的元素可以相邻排列)
     int n = _msize((void*)arr) / sizeof(arr[0]);
     int k;
     scanf("%d", &k);
