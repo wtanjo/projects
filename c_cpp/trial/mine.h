@@ -21,8 +21,8 @@ char *getSuitableString() {
     char *str0 = (char*)malloc(N*sizeof(char));
     fgets(str0, N, stdin);
     int len = strlen(str0);
-    char *str = (char*)realloc((void*)str0, (len+1)*sizeof(char));
-    str[len] = '\0';
+    char *str = (char*)realloc((void*)str0, len*sizeof(char));
+    str[len-1] = '\0';
     str0 = NULL;
     free((void*)str0); 
     return str;
