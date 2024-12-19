@@ -17,7 +17,8 @@ int main() {
 void print_full_permutations(char *str, int left, int right) {
     if (left == right) {
         printf("%s\n", str); // 输出排列结果
-    } else {
+    }
+    else {
         for (int i = left; i <= right; i++) {
             swap((str + left), (str + i)); // 交换
             print_full_permutations(str, left + 1, right); // 递归生成全排列
