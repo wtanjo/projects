@@ -12,8 +12,8 @@ int *getSuitableIntArray() {
             break;
     }
     int *arr = (int*)realloc((void*)arr0, (i+1)*sizeof(int));
-    arr0 = NULL;
-    free((void*)arr0); 
+    free((void*)arr0);
+    arr0 = NULL; //先free再赋值为NULL，防止指针悬空
     return arr;
 }
 
@@ -23,8 +23,8 @@ char *getSuitableString() {
     int len = strlen(str0);
     char *str = (char*)realloc((void*)str0, len*sizeof(char));
     str[len-1] = '\0';
-    str0 = NULL;
     free((void*)str0); 
+    str0 = NULL;
     return str;
 }
 //记得最后free((void*)arr), free((void*)str)
