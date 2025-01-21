@@ -13,6 +13,7 @@ using namespace std;
 enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN };
 
 void gotoxy(int x, int y);
+void HideTheCursor();
 
 class Snake {
 private:
@@ -21,14 +22,29 @@ private:
     int score;
     bool gameOver;
     pair<int, int> fruit;
+    int level;
+    bool valid;
 
 public:
     Snake() {
         dir = STOP;
         score = 0;
         gameOver = false;
+        level = 2;
+        valid = level == 1 || level == 2 || level == 3 || level == 4;
         body.push_back(make_pair(WIDTH / 2, HEIGHT / 2));
         generateFruit();
+    }
+
+    void setLevel() {
+        cin >> level;
+    }
+
+    int speed() {
+        if (valid) 
+            return (125 - (level - 1) * 25);
+        else
+            return 10;
     }
 
     void generateFruit() {
@@ -117,6 +133,7 @@ public:
     }
 
     void map() {
+        gotoxy(0, 2);
         for (int i = 0; i < HEIGHT; i++) {
             for (int j = 0; j < WIDTH; j++) {
                 if (i == 0 || i == HEIGHT - 1)
@@ -131,22 +148,22 @@ public:
     }
 
     void content() {
-        gotoxy(1, 1);
-        for (int i = 1; i < HEIGHT - 1; i++) {
+        gotoxy(1, 3);
+        for (int i = 3; i < HEIGHT + 1; i++) {
             for (int j = 1; j < WIDTH - 1; j++) {
                 cout << ' ';
                 if (find(body.begin(), body.end(), make_pair(j, i)) != body.end()) {
-                    gotoxy(j, i);
+                    gotoxy(j, i + 2);
                     cout << 'o';
                 }
                 else if (make_pair(j, i) == fruit) {
-                    gotoxy(j, i);
+                    gotoxy(j, i + 2);
                     cout << 'F';
                 }
             }
             gotoxy(1, i + 1);
         }
-        gotoxy(0, HEIGHT);
+        gotoxy(0, HEIGHT + 2);
         cout << "Score: " << score << endl;
     }
 
@@ -159,12 +176,16 @@ int main() {
     srand(static_cast<unsigned int>(time(nullptr)));
     Snake snake;
     system("cls");
+    cout << "输入游戏难度(1 - 4)(默认为2): ";
+    snake.setLevel();
+    cout << "按x结束游戏。" << endl;
+    HideTheCursor();
     snake.map();
     while (!snake.isGameOver()) {
         snake.content();
         snake.input();
         snake.logic();
-        Sleep(100);
+        Sleep(snake.speed());
     }
     cout << "Game Over!" << endl;
     Sleep(7000);
@@ -174,4 +195,14 @@ int main() {
 void gotoxy(int x, int y) {
     COORD pos = { (short)x, (short)y };
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+}
+
+void HideTheCursor() {
+	CONSOLE_CURSOR_INFO cciCursor;
+	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	if(GetConsoleCursorInfo(hStdOut, &cciCursor)) {
+		cciCursor.bVisible = FALSE;
+		SetConsoleCursorInfo(hStdOut, &cciCursor);
+	}
 }
