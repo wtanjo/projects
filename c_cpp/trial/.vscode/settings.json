@@ -97,7 +97,8 @@
         "xmemory": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "span": "cpp"
     },
     "code-runner.runInTerminal": true,
     "files.encoding": "gb18030"
