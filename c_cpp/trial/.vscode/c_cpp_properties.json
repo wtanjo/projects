@@ -13,8 +13,8 @@
             "windowsSdkVersion": "10.0.26100.0",
             "cStandard": "c23",
             "cppStandard": "c++23",
-            "intelliSenseMode": "windows-msvc-x64",
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/cl.exe"
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerPath": "C:/MinGW/mingw64/bin/g++.exe"
         }
     ],
     "version": 4
