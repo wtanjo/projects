@@ -1,0 +1,6 @@
+﻿  snake_provisional.cpp
+C:\projects\c_cpp\trial\snake\snake_provisional.cpp(65,14): warning C4101: “poison”: 未引用的局部变量
+  WindowTest.cpp
+  正在生成代码...
+WindowTest.obj : error LNK2005: main 已经在 snake_provisional.obj 中定义
+C:\projects\c_cpp\trial\snake\x64\Debug\snake.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
