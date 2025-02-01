@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\projects\c_cpp\trial\snake\x64\Debug\snake.exe</FullPath>
+      <FullPath>C:\projects\c_cpp_cs\trial\snake\x64\Debug\snake.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
