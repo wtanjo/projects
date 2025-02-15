@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pieces\BlackPiece.png" />
+    <None Remove="Pieces\WhitePiece.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pieces\BlackPiece.png" />
+    <Resource Include="Pieces\WhitePiece.png" />
+  </ItemGroup>
+
+</Project>

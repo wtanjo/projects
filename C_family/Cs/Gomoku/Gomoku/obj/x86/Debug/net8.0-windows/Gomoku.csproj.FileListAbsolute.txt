@@ -1,0 +1,9 @@
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\MainWindow.g.cs
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\App.g.cs
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\Gomoku_MarkupCompile.cache
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\Gomoku_MarkupCompile.lref
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\MainWindow.baml
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\Gomoku.dll
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\refint\Gomoku.dll
+E:\Projects\C_family\Cs\Gomoku\Gomoku\obj\x86\Debug\net8.0-windows\Gomoku.pdb

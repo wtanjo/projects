@@ -168,7 +168,7 @@ public:
 			poisonTime = 3;
 			poisonEffect = true;
 			generate_poison();
-			poison.pop_front();
+			poison.erase(find(poison.begin(), poison.end(), snake.front()));
 		}
 		if (poisonTime > 0 && poisonEffect == true)
 		{
@@ -273,7 +273,6 @@ int main()
 	CloseHandle(hConsole);
 	return 0;
 }
-
 
 bool operator==(mapNode N1, mapNode N2)
 {
