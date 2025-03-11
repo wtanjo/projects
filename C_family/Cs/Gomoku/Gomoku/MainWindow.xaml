@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Gomoku"
         mc:Ignorable="d"
         Title="五子棋" Height="850" Width="800">
-    <Canvas x:Name="canvas" Background="#FFCCB478" Height="840" Width="800" MouseDown="Mouse_Down">
-        <Rectangle	Margin="50,50,50,70" Height="700" Width="700" Stroke="Black" StrokeThickness="5"/>
+    <Canvas x:Name="canvas" Background="#FFCCB478" Height="840" Width="800">
+        <Rectangle Margin="50,50,50,100" Height="700" Width="700" Stroke="Black" StrokeThickness="5"/>
 
         <Path Stroke="Black" StrokeThickness="5" Data="M 50,120 H 750"/>
         <Path Stroke="Black" StrokeThickness="5" Data="M 50,190 H 750"/>
@@ -28,5 +28,8 @@
         <Path Stroke="Black" StrokeThickness="5" Data="M 540,50 V 750"/>
         <Path Stroke="Black" StrokeThickness="5" Data="M 610,50 V 750"/>
         <Path Stroke="Black" StrokeThickness="5" Data="M 680,50 V 750"/>
+
+        <Canvas x:Name="ARcanvas"/>
+        <!--这个ARcanvas用来在顶层铺放AvaibableRanges,以便局末清除-->
     </Canvas>
 </Window>
